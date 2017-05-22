@@ -1,0 +1,8 @@
+// CSS
+.v-window-foo.v-window-outerheader {
+     background: green;
+     }
+
+.v-window-foo.v-window-header {
+     color: yellow;
+     }

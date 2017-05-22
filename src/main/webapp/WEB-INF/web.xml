@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>myproject</display-name>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/applicationContext.xml</param-value>
+  </context-param>
+  <context-param>
+    <description>Vaadin production mode</description>
+    <param-name>productionMode</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>vaadinServlet</servlet-name>
+    <servlet-class>com.application.utils.RequestHolderApplicationServlet</servlet-class>
+    <init-param>
+      <param-name>application</param-name>
+      <param-value>com.application.MyUI</param-value>
+    </init-param>
+    
+ <!--   <init-param>
+    <description>Widget Set to Use</description>
+    <param-name>widgetset</param-name>
+    <param-value>com.gwt.ProjectNameWidgetSet</param-value>
+  </init-param> !-->
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>vaadinServlet</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>vaadinServlet</servlet-name>
+    <url-pattern>/VAADIN/*</url-pattern>
+  </servlet-mapping>
+ 
+  
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+</web-app>

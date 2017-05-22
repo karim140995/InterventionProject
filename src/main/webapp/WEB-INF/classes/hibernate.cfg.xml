@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">admin</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/App_bd</property>
+        
+        
+        
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		
+        <property name="connection_pool_size">1</property>
+
+    
+        <property name="show_sql">true</property>
+		
+       <!-- mappings for annotated classes -->
+       <mapping class="com.example.model.pojo.Client"/>
+       <mapping class="com.example.model.pojo.Intervenant"/>
+       <mapping class="com.example.model.pojo.Intervention"/>
+       <mapping class="com.example.model.pojo.License"/>
+       <mapping class="com.example.model.pojo.Roles"/>
+       <mapping class="com.example.model.pojo.Users"/>
+       <mapping class="com.example.model.pojo.Affectation"/>
+       
+       
+
+    </session-factory>
+</hibernate-configuration>
