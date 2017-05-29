@@ -1,7 +1,7 @@
 Intervention management Application
 ==============
 
-This project consists of an intervention management web application, it runs on the Vaadin framework.  
+This project consists in an intervention management web application, it runs on the Vaadin framework.  
 
 Workflow
 ========
