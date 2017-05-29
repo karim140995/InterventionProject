@@ -1,8 +1,7 @@
-commercial_module
+Intervention management Application
 ==============
 
-Template for a simple Vaadin application that only requires a Servlet 3.0 container to run.
-
+This project consists of an intervention management web application, it runs on the Vaadin framework.  
 
 Workflow
 ========
